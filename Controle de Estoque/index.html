@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Gerenciador de Controle de Estoque</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <a class="icon" href="#">Gerenciador de Controle de Estoque</a>
+    </div>
+    <ul class="navbar-menu">
+      <li><a href="#">Início</a></li>
+      <li><a href="#">Estoque</a></li>
+    </ul>
+    <div class="navbar-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
+  <main>
+    <div class="tudo">
+      <div class="conteudo">
+        <h1>Gerenciamento de Estoque de Produtos</h1>
+        <hr>
+
+        <input id="input-nome" type="text" class="form-control mt-3 mb-3" placeholder="Nome do produto">
+        <input id="input-detalhes" type="text" class="form-control mb-3" placeholder="Detalhes do produto">
+        <input id="input-quantidade" type="number" class="form-control mb-3" placeholder="Quantidade do produto">
+
+        <button onclick="cadastrarProduto()" class="btnCadastrar">Cadastrar Produtos</button>
+        <button onclick="exportarDados()" class="btnCadastrar ">Exportar Dados</button>
+        <button onclick="pesquisarProduto()" class="btnCadastrar">Pesquisar Produtos</button>
+
+        <input id="input-busca" type="text" class="form-control mb-3" placeholder="Pesquisar">
+        <table id="tabela-produtos" class="table table-hover table-striped">
+          <thead class="table-dark">
+            <tr>
+              <th>#ID</th>
+              <th>Nome</th>
+              <th>Detalhes</th>
+              <th>Quantidade</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+  </main>
+  <footer>
+    <div class="rodape">
+      <p>&#169; G.E.P. Todos os direitos reservados - 2023. Canal - Josenito Tutoriais</p>
+    </div>
+  </footer>
+  <script type="text/javascript" src="script/app.js"></script>
+</body>

@@ -1,0 +1,223 @@
+   @charset "UTF-8";
+
+   * {
+     margin: 0;
+     padding: 0;
+   }
+
+   html {
+     scroll-behavior: smooth;
+   }
+
+   body {
+     font-family: "Open Sans", sans-serif;
+     font-size: 1em;
+     overflow-y: auto;
+     margin: 0;
+     padding: 0;
+
+   }
+
+   div.navbar-logo a {
+     color: yellow;
+     font-family: arial;
+   }
+
+   .navbar {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 20px;
+     background: linear-gradient(150deg, rgb(30, 105, 87), rgb(35, 38, 160));
+     color: #fff;
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     z-index: 9999;
+   }
+
+   .navbar-logo a {
+     font-size: 18px;
+     color: #fff;
+     text-decoration: none;
+   }
+
+   .navbar-menu {
+     display: flex;
+     list-style: none;
+     margin: 0;
+     padding: 0;
+   }
+
+   .navbar-menu li {
+     margin-left: 20px;
+   }
+
+   .navbar-menu li:first-child {
+     margin-left: 0;
+   }
+
+   .navbar-menu li a {
+     font-size: 18px;
+     color: #fff;
+     text-decoration: none;
+   }
+
+   /* Navbar Toggle */
+   .navbar-toggle {
+     display: none;
+     cursor: pointer;
+   }
+
+   .navbar-toggle span {
+     display: block;
+     width: 30px;
+     height: 5px;
+     margin-bottom: 5px;
+     background-color: #fff;
+   }
+
+   /* Media Queries */
+   @media screen and (max-width: 768px) {
+     .navbar-menu {
+       display: none;
+     }
+
+     .navbar-toggle {
+       display: block;
+     }
+
+     .navbar-toggle.ativo span:nth-child(1) {
+       opacity: 0;
+     }
+
+     .navbar-toggle.ativo span:nth-child(2) {
+       transform: rotate(45deg);
+       margin-top: 10px;
+     }
+
+     .navbar-toggle.ativo span:nth-child(3) {
+       transform: rotate(-45deg);
+       margin-top: -10px;
+     }
+
+     .navbar-menu.ativo {
+       display: flex;
+       flex-direction: column;
+       position: absolute;
+       top: 70px;
+       left: 0;
+       width: 100%;
+       background: linear-gradient(150deg, rgb(30, 105, 87), rgb(35, 38, 160));
+       padding: 20px;
+     }
+
+     .navbar-menu.ativo li {
+       margin: 10px 0;
+     }
+   }
+
+   /*Container no html no boady*/
+   .main {
+     width: 100%;
+     height: 80%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   }
+
+   .tudo {
+     padding: 10px;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     background-color: rgba(255, 255, 255, 0.7);
+
+   }
+
+   .conteudo {
+     flex: 1;
+     margin: 10px auto;
+     min-width: 250px;
+     background-color: #f2f2f2;
+     padding: 60px;
+     text-align: center;
+     border-radius: 70px 0;
+   }
+
+   /* Estilos para o cabeçalho */
+   h1 {
+     text-align: center;
+   }
+
+   /* Estilos para os inputs e botões */
+   .input {
+     width: 70%;
+     margin-bottom: 10px;
+   }
+
+   .btnCadastrar {
+     padding: 15px;
+     width: 70%;
+     height: auto;
+     font-size: 16px;
+     background-color: #007bff;
+     color: #fff;
+     border: none;
+     border-radius: 12px;
+     cursor: pointer;
+     text-align: center;
+     display: block;
+     margin: 8px auto;
+   }
+
+
+   /* Estilos para a tabela */
+   table {
+     width: 100%;
+     margin-top: 20px;
+   }
+
+   /*Rodapé*/
+   .rodape {
+     flex: 1;
+     min-width: 250px;
+     margin: 0px;
+     justify-content: space-between;
+     align-items: center;
+     padding: 12px;
+     background-color: #333;
+     color: #fff;
+     text-align: center;
+
+   }
+
+   .rodape p {
+     min-width: 250px;
+     color: #fff;
+     text-align: center;
+     font-size: 12pt;
+     text-decoration: none;
+     margin: 0px
+   }
+
+
+   /* Estilos para tornar a tabela responsiva em telas menores */
+   @media (max-width: 768px) {
+     table {
+       overflow-x: auto;
+       display: block;
+     }
+
+     th,
+     td {
+       min-width: 100px;
+     }
+
+     button {
+       padding: 15px;
+       width: 70%;
+
+     }
+   }
